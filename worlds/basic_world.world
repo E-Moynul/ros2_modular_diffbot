@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="basic_world">
+
+    <!-- ================= Physics ================= -->
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- ================= Sun (default lighting) ================= -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- ================= Ground plane ================= -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- ================= কিছু simple obstacle (demo/nav testing এর জন্য) ================= -->
+    <model name="box_obstacle_1">
+      <static>true</static>
+      <pose>1.5 0.5 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.3 0.3 0.5</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.3 0.3 0.5</size></box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.2 0.2 1</ambient>
+            <diffuse>0.8 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="box_obstacle_2">
+      <static>true</static>
+      <pose>1.5 -0.7 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.3 0.3 0.5</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.3 0.3 0.5</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.6 0.8 1</ambient>
+            <diffuse>0.2 0.6 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_1">
+      <static>true</static>
+      <pose>3.0 0 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.1 2.0 0.5</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.1 2.0 0.5</size></box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

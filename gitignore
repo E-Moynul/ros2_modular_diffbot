@@ -1,0 +1,19 @@
+# ROS2 / colcon build artifacts (এগুলো তোমার মেশিনে regenerate হয়, repo তে রাখার দরকার নাই)
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Rosbag recordings (বড় binary ফাইল, প্রতিবার আলাদা হবে)
+rosbag2_*/
+
+# Editor/OS clutter
+.vscode/
+*.swp
+.DS_Store
+
+# STL/CAD export কাজের ফাইল যদি এই repo তে রাখো (চাইলে বাদ দিতে পারো এই লাইন)
+*.f3d
