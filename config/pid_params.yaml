@@ -25,6 +25,12 @@ pid_controller:
     max_pwm: 255              # motor driver এর সর্বোচ্চ PWM মান
     control_frequency: 10.0   # Hz - WiFi এর জন্য এর বেশি না রাখাই ভালো
 
+
+odom_publisher:
+  ros__parameters:
+    wheel_base: 0.17
+    wheel_radius: 0.03
+
 # ভবিষ্যতে real hardware এর জন্য যখন launch file বানাবে (Tinkercad/hardware
 # ধাপের পরে), তখন pid_controller node এ এভাবে এই yaml লোড করবে:
 #
