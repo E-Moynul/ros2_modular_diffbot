@@ -27,7 +27,7 @@ class KinematicsWifiBridge(Node):
         self.declare_parameter('wheel_base', 0.1)     # মিটার - motor বসানোর পর মেপে বসাও
         self.declare_parameter('wheel_radius', 0.0325)    # মিটার - চাকার radius
         self.declare_parameter('max_pwm', 200)          # সর্বোচ্চ PWM (255 এর কম রাখলাম, শুরুতে নিরাপদ)
-        self.declare_parameter('speed_to_pwm_scale', 40.0)  # rad/s -> PWM conversion factor, tune করে ঠিক করতে হবে
+        self.declare_parameter('speed_to_pwm_scale', 20.0)  # rad/s -> PWM conversion factor, tune করে ঠিক করতে হবে
 
         self.esp_ip = self.get_parameter('esp_ip').value
         self.esp_port = self.get_parameter('esp_port').value
