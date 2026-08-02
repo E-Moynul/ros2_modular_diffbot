@@ -21,11 +21,11 @@
 #include <WiFi.h>
 
 // ---------------- WiFi settings ----------------
-const char* WIFI_SSID     = "YOUR_WIFI_NAME";
-const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
+const char* WIFI_SSID     = "Redmi 13";
+const char* WIFI_PASSWORD = "00000000";
 
-IPAddress STATIC_IP(192, 168, 1, 100);
-IPAddress GATEWAY(192, 168, 1, 1);
+IPAddress STATIC_IP(10, 26, 161, 100);
+IPAddress GATEWAY(10, 26, 161, 168);
 IPAddress SUBNET(255, 255, 255, 0);
 
 const uint16_t TCP_PORT = 8080;
