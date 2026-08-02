@@ -20,7 +20,7 @@ class KinematicsWifiBridge(Node):
     def __init__(self):
         super().__init__('kinematics_wifi_bridge')
 
-        self.declare_parameter('esp_ip', '192.168.1.100')
+        self.declare_parameter('esp_ip', '10.26.161.100')
         self.declare_parameter('esp_port', 8080)
         self.declare_parameter('socket_timeout_sec', 2.0)
         self.declare_parameter('reconnect_interval_sec', 3.0)
