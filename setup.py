@@ -30,8 +30,6 @@ setup(
     entry_points={
         'console_scripts': [
         'kinematics_wifi_bridge = ros2_modular_diffbot.kinematics_wifi_bridge:main',
-        'pid_controller = ros2_modular_diffbot.pid_controller:main',
-        'odom_publisher = ros2_modular_diffbot.odom_publisher:main',
         ],
     },
 )
