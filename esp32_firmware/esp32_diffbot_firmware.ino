@@ -2,19 +2,11 @@
   ================================================================
   ESP32 Diff-Drive Robot Firmware (SIMPLIFIED - no encoder)
   ================================================================
-  Protocol:
-    PC -> ESP32  : "<left_pwm>,<right_pwm>\n"   (int, -200..200)
-    (কোনো feedback ফেরত পাঠানো হয় না - open-loop)
 
-  Hardware assumed:
+  Hardware :
     - L298N motor driver
     - 2x plain BO gear motor (NO encoder)
-    - ESP32 connects to your existing WiFi router (Station mode)
 
-  BEFORE USE:
-    1. WIFI_SSID / WIFI_PASSWORD বসাও
-    2. STATIC_IP নিজের router এর subnet অনুযায়ী ঠিক করো
-       (kinematics_wifi_bridge.py এর esp_ip parameter এর সাথে মিলতে হবে)
   ================================================================
 */
 
@@ -41,7 +33,7 @@ const uint16_t TCP_PORT = 8080;
 
 // ---------------- PWM (LEDC) config ----------------
 const int PWM_FREQ = 1000;
-const int PWM_RES_BITS = 8;   // 0-255
+const int PWM_RES_BITS = 8; 
 const int PWM_CHANNEL_L = 0;
 const int PWM_CHANNEL_R = 1;
 
@@ -71,9 +63,7 @@ void setup() {
 
   ledcAttach(ENA_PIN, PWM_FREQ, PWM_RES_BITS);
   ledcAttach(ENB_PIN, PWM_FREQ, PWM_RES_BITS);
-  // পুরনো Arduino-ESP32 core (< 3.0) হলে বদলে এভাবে লিখতে হবে:
-  // ledcSetup(PWM_CHANNEL_L, PWM_FREQ, PWM_RES_BITS); ledcAttachPin(ENA_PIN, PWM_CHANNEL_L);
-  // ledcSetup(PWM_CHANNEL_R, PWM_FREQ, PWM_RES_BITS); ledcAttachPin(ENB_PIN, PWM_CHANNEL_R);
+
 
   WiFi.config(STATIC_IP, GATEWAY, SUBNET);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
