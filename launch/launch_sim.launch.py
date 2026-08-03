@@ -21,9 +21,7 @@ def generate_launch_description():
         default_value=default_world,
         description='Gazebo world ফাইলের পুরো path'
     )
-
-    # rsp.launch.py কে reuse করছি - use_sim_time=true পাস করে দিচ্ছি
-    # যাতে robot_state_publisher Gazebo এর simulation clock অনুসরণ করে
+    
     rsp = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_path, 'launch', 'rsp.launch.py')
@@ -38,8 +36,6 @@ def generate_launch_description():
         launch_arguments={'world': LaunchConfiguration('world')}.items()
     )
 
-    # robot_state_publisher যে /robot_description topic এ URDF publish করছে,
-    # সেখান থেকেই spawn_entity.py robot টাকে Gazebo world এ বসাবে
     spawn_entity = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
