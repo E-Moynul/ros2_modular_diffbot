@@ -1,14 +1,4 @@
-/*
-  ================================================================
-  ESP32 Diff-Drive Robot Firmware (SIMPLIFIED - no encoder)
-  ================================================================
 
-  Hardware :
-    - L298N motor driver
-    - 2x plain BO gear motor (NO encoder)
-
-  ================================================================
-*/
 
 #include <WiFi.h>
 
