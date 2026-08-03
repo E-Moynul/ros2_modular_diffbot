@@ -19,7 +19,7 @@ def generate_launch_description():
     declare_world_arg = DeclareLaunchArgument(
         'world',
         default_value=default_world,
-        description='Gazebo world ফাইলের পুরো path'
+        description='Gazebo world path'
     )
     
     rsp = IncludeLaunchDescription(
