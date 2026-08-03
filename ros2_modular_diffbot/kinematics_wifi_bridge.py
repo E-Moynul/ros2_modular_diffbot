@@ -1,4 +1,4 @@
-#for github
+
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
@@ -8,14 +8,6 @@ import time
 
 
 class KinematicsWifiBridge(Node):
-    """
-    সরলীকৃত (open-loop) ভার্সন - encoder feedback নাই।
-
-    কাজ: /cmd_vel (Twist) সরাসরি পেয়ে kinematics দিয়ে left/right wheel PWM
-    বের করে ESP32 কে WiFi (TCP) দিয়ে পাঠায়। কোনো feedback নাই, তাই
-    pid_controller.py/odom_publisher.py এখন আর দরকার নাই - এই একটা
-    node ই যথেষ্ট real hardware চালানোর জন্য।
-    """
 
     def __init__(self):
         super().__init__('kinematics_wifi_bridge')
@@ -24,10 +16,10 @@ class KinematicsWifiBridge(Node):
         self.declare_parameter('esp_port', 8080)
         self.declare_parameter('socket_timeout_sec', 2.0)
         self.declare_parameter('reconnect_interval_sec', 3.0)
-        self.declare_parameter('wheel_base', 0.1)     # মিটার - motor বসানোর পর মেপে বসাও
-        self.declare_parameter('wheel_radius', 0.0325)    # মিটার - চাকার radius
-        self.declare_parameter('max_pwm', 200)          # সর্বোচ্চ PWM (255 এর কম রাখলাম, শুরুতে নিরাপদ)
-        self.declare_parameter('speed_to_pwm_scale', 14.0)  # rad/s -> PWM conversion factor, tune করে ঠিক করতে হবে
+        self.declare_parameter('wheel_base', 0.1)    
+        self.declare_parameter('wheel_radius', 0.0325)   
+        self.declare_parameter('max_pwm', 200)       
+        self.declare_parameter('speed_to_pwm_scale', 14.0)  
 
         self.esp_ip = self.get_parameter('esp_ip').value
         self.esp_port = self.get_parameter('esp_port').value
@@ -77,15 +69,13 @@ class KinematicsWifiBridge(Node):
         v = msg.linear.x
         w = msg.angular.z
 
-        # inverse kinematics: robot velocity -> প্রতিটা চাকার angular velocity
+        # inverse kinematics: robot velocity -> each wheel angular velocity
         v_r = v + (w * self.wheel_base) / 2.0
         v_l = v - (w * self.wheel_base) / 2.0
 
         w_r = v_r / self.wheel_radius
         w_l = v_l / self.wheel_radius
 
-        # rad/s -> PWM (এই scale factor motor হাতে পেয়ে টেস্ট করে টিউন করতে হবে,
-        # যতটা PWM দিলে motor নড়া শুরু করে সেটাই একটা baseline)
         pwm_l = int(max(-self.max_pwm, min(self.max_pwm, w_l * self.speed_to_pwm_scale)))
         pwm_r = int(max(-self.max_pwm, min(self.max_pwm, w_r * self.speed_to_pwm_scale)))
 
