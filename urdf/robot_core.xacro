@@ -32,7 +32,7 @@
         </inertial>
     </xacro:macro>
 
-    <!-- ================= MATERIALS (RViz এর জন্য) ================= -->
+    <!-- ================= MATERIALS (For RViz  ================= -->
     <material name="white">
         <color rgba="1 1 1 1" />
     </material>
