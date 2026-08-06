@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<robot name="my_diff_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-
-    <!-- the file only adds other xacro files of the package -->
-
-    <xacro:include filename="robot_core.xacro" />
-    <xacro:include filename="robot_gazebo.xacro" />
-
-</robot>
