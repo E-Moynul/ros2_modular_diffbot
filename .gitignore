@@ -1,0 +1,19 @@
+# ROS2 / colcon build artifacts
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Rosbag recordings
+rosbag2_*/
+
+# Editor/OS clutter
+.vscode/
+*.swp
+.DS_Store
+
+# STL/CAD export
+*.f3d
