@@ -9,7 +9,7 @@
             <left_joint>left_wheel_joint</left_joint>
             <right_joint>right_wheel_joint</right_joint>
 
-            <wheel_separation>0.17</wheel_separation>
+            <wheel_separation>0.19</wheel_separation>
             <wheel_diameter>0.06</wheel_diameter>
             <max_wheel_torque>200</max_wheel_torque>
             <max_wheel_acceleration>10.0</max_wheel_acceleration>
