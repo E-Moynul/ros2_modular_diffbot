@@ -73,8 +73,39 @@ graph LR
 | Motor Driver | L298N Dual H-Bridge |
 | Motors | Plain BO motors (no encoders — open-loop control) |
 | Chassis | Acrylic 2WD + caster wheel kit |
-| Power | Dual supply — powerbank (logic) + battery pack (motors) |
+| Power | 3x 18650 Battery Pack with 5V Buck Converter |
 | Comms | WiFi (static IP) — TCP socket, port 8080 |
+
+---
+
+## 🔌 Wiring & Pinout
+
+**1. Power & Switch Distribution**
+* **Battery (3x 18650) Red (+)** ➔ Switch (Input)
+* **Battery (3x 18650) Black (-)** ➔ L298N (GND) **AND** Buck Converter (IN-)
+* **Switch (Output)** ➔ L298N (12V) **AND** Buck Converter (IN+)
+
+**2. Step-down Power (Buck Converter ➔ ESP32)**
+* **Buck Converter OUT+** ➔ ESP32 VIN / 5V
+* **Buck Converter OUT-** ➔ ESP32 GND
+
+**3. Logic & Control (ESP32 ➔ L298N)**
+* **ESP32 GPIO 25** ➔ L298N ENA (Left Motor PWM)
+* **ESP32 GPIO 26** ➔ L298N IN1
+* **ESP32 GPIO 27** ➔ L298N IN2
+* **ESP32 GPIO 32** ➔ L298N IN3
+* **ESP32 GPIO 14** ➔ L298N IN4
+* **ESP32 GPIO 33** ➔ L298N ENB (Right Motor PWM)
+
+**4. Power Output (L298N ➔ Motors)**
+* **L298N OUT1 & OUT2** ➔ Left Motor
+* **L298N OUT3 & OUT4** ➔ Right Motor
+
+> **⚠️ Critical Hardware Notes:**
+> * Keep the L298N 5V jumper cap **ON** (intact).
+> * Remove ENA/ENB jumper caps for ESP32 PWM speed control (otherwise motors will run at constant full speed).
+> * **Common Ground:** Ensure all Grounds (Battery, L298N, Buck Converter, ESP32) are explicitly connected together.
+> * Motor wires connect *only* to the L298N OUT pins, never directly to the ESP32.
 
 ---
 
