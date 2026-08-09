@@ -4,7 +4,7 @@
 const char* WIFI_SSID     = "Redmi 13";
 const char* WIFI_PASSWORD = "00000000";
 
-IPAddress STATIC_IP(10, 26, 161, 100);
+IPAddress STATIC_IP(10, 26, 161, 224); //hotspot ip
 IPAddress GATEWAY(10, 26, 161, 168);
 IPAddress SUBNET(255, 255, 255, 0);
 
