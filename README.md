@@ -206,7 +206,7 @@ Covers copyright headers, PEP8 (`flake8`), and docstring conventions (`pep257`) 
 - [ ] IMU integration for odometry fusion
 - [ ] Nav2 stack integration
 - [ ] Migrate WiFi bridge to `micro-ROS` (native ROS2 on ESP32, no custom TCP protocol)
-- [ ] Reinforcement learning navigation in Isaac Sim
+- [ ] Upgrade to Autonomous Mini Cleaning Robot via Reinforcement Learning in Nvidia Isaac Sim
 
 ---
 
