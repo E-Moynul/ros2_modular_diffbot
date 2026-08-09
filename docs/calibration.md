@@ -58,21 +58,9 @@ The scale factor was tuned using a simple **step-response bench test**:
 4. Compute the *actual* linear speed achieved: `v_actual = distance / time`
 5. Compare against the *commanded* `v` and adjust `speed_to_pwm_scale` until
    `v_actual ≈ v_commanded` within acceptable tolerance.
-6. Repeat at 3–4 different commanded speeds (e.g. 0.05, 0.10, 0.15, 0.20 m/s)
+6. Repeat at 3–4 different commanded speeds
    to check linearity across the operating range, not just a single point.
 
-### Results
-
-| Commanded `v` (m/s) | Computed PWM | Measured `v_actual` (m/s) | Error |
-|---|---|---|---|
-| 0.05 | *TODO* | *TODO* | *TODO* |
-| 0.10 | *TODO* | *TODO* | *TODO* |
-| 0.15 | *TODO* | *TODO* | *TODO* |
-| 0.20 | *TODO* | *TODO* | *TODO* |
-
-*(Fill in with your actual bench/floor test measurements — this table is the
-single most convincing piece of evidence for reviewers that the sim-to-real
-loop was actually validated, not just assumed.)*
 
 ## 4. Known Limitations
 
