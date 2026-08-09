@@ -29,6 +29,14 @@ The project deliberately avoids Nav2/SLAM complexity to focus on **doing the fun
 
 ---
 
+## 🎥 Demo
+
+| Simulation | Real Hardware |
+|:---:|:---:|
+| ![sim demo](docs/media/sim_demo.gif) | ![real demo](docs/media/real_demo.gif) |
+
+---
+
 ## ✨ Key Features
 
 | Category | Details |
@@ -178,14 +186,6 @@ PWM = clamp(ω_wheel × scale_factor, −max_pwm, max_pwm)
 ```
 
 Where `L` = wheel base, `R` = wheel radius. Since the motors are **open-loop (no encoders)**, `speed_to_pwm_scale` is an empirically calibrated constant rather than a closed-loop gain — a deliberate, documented trade-off for this hardware tier (see [`docs/calibration.md`](docs/calibration.md)).
-
----
-
-## 🎥 Demo
-
-| Simulation | Real Hardware |
-|:---:|:---:|
-| ![sim demo](docs/media/sim_demo.gif) | ![real demo](docs/media/real_demo.gif) |
 
 ---
 
