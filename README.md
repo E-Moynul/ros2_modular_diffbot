@@ -37,7 +37,7 @@ The project deliberately avoids Nav2/SLAM complexity to focus on **doing the fun
 
 | Images | Simulation & Real Hardware |
 |:---:|:---:|
-| ![sim](<img width="1834" height="1036" alt="sim_look" src="https://github.com/user-attachments/assets/06576001-4419-452d-9619-b2599a6d9405" />) ![real](<img width="4000" height="3000" alt="ros2_project1" src="https://github.com/user-attachments/assets/8936d9a8-19cf-40fd-aedb-ee90a4aa6757" />) | ![working](https://github.com/user-attachments/assets/5dacb795-1607-4ec2-95c9-e01f3a8a5c59) |
+| <img width="400" alt="sim_look" src="https://github.com/user-attachments/assets/06576001-4419-452d-9619-b2599a6d9405" /><br><br><img width="400" alt="ros2_project1" src="https://github.com/user-attachments/assets/8936d9a8-19cf-40fd-aedb-ee90a4aa6757" /> | <video src="https://github.com/user-attachments/assets/5dacb795-1607-4ec2-95c9-e01f3a8a5c59" controls="controls" width="100%"></video> |
 
 
 
