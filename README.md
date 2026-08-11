@@ -39,6 +39,9 @@ The project deliberately avoids Nav2/SLAM complexity to focus on **doing the fun
 |:---:|:---:|
 | <img width="400" alt="sim_look" src="https://github.com/user-attachments/assets/06576001-4419-452d-9619-b2599a6d9405" /><br><br><img width="400" alt="ros2_project1" src="https://github.com/user-attachments/assets/8936d9a8-19cf-40fd-aedb-ee90a4aa6757" /> | <video src="https://github.com/user-attachments/assets/5dacb795-1607-4ec2-95c9-e01f3a8a5c59" autoplay loop muted playsinline width="100%"></video> |
 
+<br>
+
+<a href="https://drive.google.com/file/d/1XATqPz2DIHgkIiWCGD5nkkuKgArQS4mZ/view?usp=drive_link" target="_blank">click here for the full demo video</a>
 
 
 ---
