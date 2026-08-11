@@ -16,7 +16,7 @@ def generate_launch_description():
     declare_use_sim_time_arg = DeclareLaunchArgument(
         'use_sim_time',
         default_value='false',
-        description='Gazebo simulation clock ব্যবহার করতে true দাও'
+        description='To use gazebo simulation'
     )
 
     pkg_path = get_package_share_directory(package_name)
