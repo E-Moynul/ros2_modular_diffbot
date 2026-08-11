@@ -41,7 +41,7 @@ The project deliberately avoids Nav2/SLAM complexity to focus on **doing the fun
 
 <br>
 
-<a href="https://drive.google.com/file/d/1XATqPz2DIHgkIiWCGD5nkkuKgArQS4mZ/view?usp=drive_link" target="_blank">click here for the full demo video</a>
+<a href="https://youtu.be/KWRyHUqxZV0?si=WFftgoBek23DWwJf" target="_blank">click here for the full demo video</a>
 
 
 ---
