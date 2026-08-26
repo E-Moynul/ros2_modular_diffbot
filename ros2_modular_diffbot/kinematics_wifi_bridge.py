@@ -6,6 +6,8 @@ import socket
 import threading
 import time
 
+from ros2_modular_diffbot.kinematics import twist_to_pwm
+
 
 class KinematicsWifiBridge(Node):
 
@@ -69,15 +71,14 @@ class KinematicsWifiBridge(Node):
         v = msg.linear.x
         w = msg.angular.z
 
-        # inverse kinematics: robot velocity -> each wheel angular velocity
-        v_r = v + (w * self.wheel_base) / 2.0
-        v_l = v - (w * self.wheel_base) / 2.0
-
-        w_r = v_r / self.wheel_radius
-        w_l = v_l / self.wheel_radius
-
-        pwm_l = int(max(-self.max_pwm, min(self.max_pwm, w_l * self.speed_to_pwm_scale)))
-        pwm_r = int(max(-self.max_pwm, min(self.max_pwm, w_r * self.speed_to_pwm_scale)))
+        pwm_l, pwm_r = twist_to_pwm(
+            v,
+            w,
+            self.wheel_base,
+            self.wheel_radius,
+            self.speed_to_pwm_scale,
+            self.max_pwm,
+        )
 
         command_str = f"{pwm_l},{pwm_r}\n"
 
