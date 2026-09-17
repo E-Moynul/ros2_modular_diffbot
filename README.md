@@ -8,14 +8,15 @@
 
 *A modular, open-loop differential-drive mobile robot built from scratch: simulated in Gazebo, deployed on real low-cost hardware over WiFi.*
 
+[![Integrated with - RLSOK v1.5.2](https://img.shields.io/badge/Integrated_with-RLSOK_v1.5.2-blue?style=for-the-badge)](https://rlsok.com)
+
 [![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
 [![Gazebo](https://img.shields.io/badge/Gazebo-Classic-orange?logo=gazebo&logoColor=white)](https://classic.gazebosim.org/)
 [![ESP32](https://img.shields.io/badge/MCU-ESP32-red?logo=espressif&logoColor=white)](https://www.espressif.com/en/products/socs/esp32)
 [![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen)](#)
-<br>
-[![Integrated with - RLSOK v1.5.2](https://img.shields.io/badge/Integrated_with-RLSOK_v1.5.2-blue?style=for-the-badge)](https://rlsok.com)
+
 
 <img src="docs/media/hero_banner.gif" alt="DiffBot in action" width="720"/>
 
