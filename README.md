@@ -34,6 +34,19 @@ The project deliberately avoids Nav2/SLAM complexity to focus on **doing the fun
 
 ---
 
+## 🌍 Open-Source Recognition & Integration
+
+This project has been officially recognized and integrated into **[RLSOK](https://rlsok.com/)** (Release v1.5.2), a global open-source configuration management tool. 
+
+<div align="center">
+  <img width="1836" height="963" alt="RLSOK Integration Proof" src="https://github.com/user-attachments/assets/ce305d93-a9f9-40e2-84d6-6e1627059fb8" />
+</div>
+<br>
+
+* **The Integration:** RLSOK utilizes this DiffBot's architecture as a standard baseline to test and manage physical robot configurations, specifically bridging the gap between Gazebo simulations and physical hardware via the custom TCP/WiFi node.
+* **Official Documentation:** Check out the [Step-by-step DiffBot guide on RLSOK (v1.5.2)](https://github.com/realitywarden/rlsok/blob/v1.5.2/docs/diffbot-saved-review.md) which uses this exact repository as the standard baseline.
+
+---
 
 
 ## 🎥 Demo
