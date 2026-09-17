@@ -227,11 +227,11 @@ Covers copyright headers, PEP8 (`flake8`), and docstring conventions (`pep257`) 
 
 ## 🗺️ Roadmap
 
-- [ ] Add wheel encoders → closed-loop velocity control
-- [ ] IMU integration for odometry fusion
-- [ ] Nav2 stack integration
-- [ ] Migrate WiFi bridge to `micro-ROS` (native ROS2 on ESP32, no custom TCP protocol)
-- [ ] Upgrade to Autonomous Mini Cleaning Robot via Reinforcement Learning in Nvidia Isaac Sim
+- [x] Validated open-loop kinematics and hardware deployment
+- [x] Officially integrated into RLSOK v1.5.2 for offline configuration management
+- [ ] **Next Major Iteration:** Evolve architecture into a Self-Balancing Two-Wheel Robot featuring closed-loop PID control and active IMU (MPU6050) feedback (In Progress).
+- [ ] Migrate WiFi bridge to `micro-ROS` for native real-time control.
+- [ ] Upgrade to Autonomous Mini Cleaning Robot via Reinforcement Learning in Nvidia Isaac Sim.
 
 ---
 
