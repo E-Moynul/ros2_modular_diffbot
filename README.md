@@ -39,7 +39,7 @@ The project deliberately avoids Nav2/SLAM complexity to focus on **doing the fun
 This project has been officially recognized and integrated into **[RLSOK](https://rlsok.com/)** (Release v1.5.2), a global open-source configuration management tool. 
 
 <div align="center">
-  <img width="720" height="857" alt="rlsok" src="https://github.com/user-attachments/assets/c5c28fcd-b635-4cf6-b078-bb1b5eeeb9d5" />
+  <img width="1500" height="857" alt="rlsok" src="https://github.com/user-attachments/assets/c5c28fcd-b635-4cf6-b078-bb1b5eeeb9d5" />
 </div>
 <br>
 
