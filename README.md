@@ -8,7 +8,7 @@
 
 *A modular, open-loop differential-drive mobile robot built from scratch: simulated in Gazebo, deployed on real low-cost hardware over WiFi.*
 
-[![Integrated with - RLSOK v1.5.3](https://img.shields.io/badge/Integrated_with-RLSOK_v1.5.2-blue?style=for-the-badge)](https://rlsok.com)
+[![Integrated with - RLSOK v1.5.3](https://img.shields.io/badge/Integrated_with-RLSOK_v1.5.3-blue?style=for-the-badge)](https://rlsok.com)
 
 [![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
 [![Gazebo](https://img.shields.io/badge/Gazebo-Classic-orange?logo=gazebo&logoColor=white)](https://classic.gazebosim.org/)
