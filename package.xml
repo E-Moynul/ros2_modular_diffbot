@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   
   <description>ROS2 differential drive robot with Gazebo simulation and ESP32 WiFi bridge for sim-to-real deployment</description>
-  <maintainer email="rifat@todo.todo">rifat</maintainer>
+  <maintainer email="it23017@mbstu.ac.bd">rifat</maintainer>
   
   <license>MIT</license>
   
