@@ -19,7 +19,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='rifat',
-    maintainer_email='rifat@todo.todo',
+    maintainer_email='it23017@mbstu.ac.bd',
     description='ROS2 differential drive robot with Gazebo simulation and ESP32 WiFi bridge for sim-to-real deployment',
     license='MIT',
     extras_require={
